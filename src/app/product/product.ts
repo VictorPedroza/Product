@@ -21,5 +21,22 @@ export class ProductComponent {
       price: [''],
     })
   }
+
+  save() {
+    const { name, description, price } = this.formGroupProduct.value;
+
+    this.products.push(this.formGroupProduct.value);
+
+    this.formGroupProduct.reset();
+
+    alert(`
+      Produtos Salvos com Sucesso!
+      Nome: ${name}
+      Descrição: ${description}
+      Preço: ${price}
+    `)
+
+    console.log(this.products.length)
+  }
 }
 

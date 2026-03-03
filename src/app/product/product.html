@@ -18,6 +18,25 @@
       <input formControlName="price" type="text" class="form-control" id="inputPrice">
     </div>
 
-    <button type="submit" class="btn btn-primary w-25">Salvar</button>
+    <button type="submit" (click)="save()" class="btn btn-primary w-25">Salvar</button>
   </form>
+
+  <div class="container">
+    <table class="table">
+    <thead>
+      <th scope="col" >#</th>
+      <th scope="col" >Name</th>
+      <th scope="col" >Descrição</th>
+      <th scope="col" >Preço</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <th scope="row"></th>
+        <th>{{p.name}}</th>
+        <th>{{p.description}}</th>
+        <th>{{p.price}}</th>
+      </tr>
+    </tbody>
+  </table>
+  </div>
 </div>
