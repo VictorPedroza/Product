@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-product',
@@ -7,8 +8,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './product.html',
   styleUrl: './product.css',
 })
-export class Product {
+export class ProductComponent {
   formGroupProduct: FormGroup;
+  products: Product[] = [];
 
   constructor(private formBuilder: FormBuilder) {
 
