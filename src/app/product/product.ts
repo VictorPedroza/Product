@@ -14,7 +14,7 @@ export class Product {
 
     this.formGroupProduct = formBuilder.group({
       id: [''],
-      name: ['Victor Pedroza'],
+      name: [''],
       description: [''],
       price: [''],
     })
