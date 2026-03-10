@@ -35,8 +35,6 @@ export class ProductComponent {
       Descrição: ${description}
       Preço: ${price}
     `)
-
-    console.log(this.products.length)
   }
 }
 

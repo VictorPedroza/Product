@@ -1,0 +1,43 @@
+<div class="d-flex w-full h-full">
+  <div class="container">
+    <div class="display-4 text-center">Cadastro de Cliente</div>
+
+  <form [formGroup]="formGroupClient" >
+   <div class="mb-3">
+      <label for="inputName" class="form-label">Nome:</label>
+      <input formControlName="name" type="text" class="form-control" id="inputName">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputAge" class="form-label">Idade:</label>
+      <input formControlName="age" type="number" class="form-control" id="inputAge">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputPhone" class="form-label">Telefone:</label>
+      <input formControlName="phone" type="text" class="form-control" id="inputPhone">
+    </div>
+
+    <button type="submit" (click)="save()" class="btn btn-primary w-25 shadow-sm">Salvar</button>
+  </form>
+  </div>
+  <div class="container">
+    <h1>Tabela de Clientes</h1>
+    <table class="table">
+    <thead>
+      <th scope="col" >#</th>
+      <th scope="col" >Nome</th>
+      <th scope="col" >Idade</th>
+      <th scope="col" >Gênero</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of clients">
+        <th scope="row">{{c.id}}</th>
+        <th>{{c.name}}</th>
+        <th>{{c.age}}</th>
+        <th>{{c.phone}}</th>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
